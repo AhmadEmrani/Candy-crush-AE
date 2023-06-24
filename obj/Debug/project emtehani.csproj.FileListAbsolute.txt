@@ -1,0 +1,12 @@
+F:\CODES C#\project emtehani\bin\Debug\project emtehani.exe.config
+F:\CODES C#\project emtehani\bin\Debug\project emtehani.exe
+F:\CODES C#\project emtehani\bin\Debug\project emtehani.pdb
+F:\CODES C#\project emtehani\obj\Debug\project emtehani.csproj.AssemblyReference.cache
+F:\CODES C#\project emtehani\obj\Debug\project emtehani.csproj.SuggestedBindingRedirects.cache
+F:\CODES C#\project emtehani\obj\Debug\project_emtehani.Form1.resources
+F:\CODES C#\project emtehani\obj\Debug\project_emtehani.Properties.Resources.resources
+F:\CODES C#\project emtehani\obj\Debug\project emtehani.csproj.GenerateResource.cache
+F:\CODES C#\project emtehani\obj\Debug\project emtehani.csproj.CoreCompileInputs.cache
+F:\CODES C#\project emtehani\obj\Debug\project emtehani.exe
+F:\CODES C#\project emtehani\obj\Debug\project emtehani.pdb
+F:\CODES C#\project emtehani\obj\Debug\project_emtehani.Game_Form.resources
