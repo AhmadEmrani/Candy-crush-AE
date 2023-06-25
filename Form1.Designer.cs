@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.Button_start_game = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_login = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.loginPage1 = new project_emtehani.LoginPage();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,21 +45,22 @@
             this.Button_start_game.UseVisualStyleBackColor = true;
             this.Button_start_game.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // button_login
             // 
-            this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(12, 123);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 62);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_login.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_login.Location = new System.Drawing.Point(12, 123);
+            this.button_login.Name = "button_login";
+            this.button_login.Size = new System.Drawing.Size(200, 62);
+            this.button_login.TabIndex = 1;
+            this.button_login.Text = "Login";
+            this.button_login.UseVisualStyleBackColor = true;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.AutoSize = true;
             this.groupBox1.BackColor = System.Drawing.Color.Indigo;
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button_login);
             this.groupBox1.Controls.Add(this.Button_start_game);
             this.groupBox1.Location = new System.Drawing.Point(0, -8);
             this.groupBox1.Name = "groupBox1";
@@ -66,16 +68,27 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // loginPage1
+            // 
+            this.loginPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.loginPage1.Location = new System.Drawing.Point(234, 12);
+            this.loginPage1.Name = "loginPage1";
+            this.loginPage1.Size = new System.Drawing.Size(554, 544);
+            this.loginPage1.TabIndex = 1;
+            this.loginPage1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 568);
+            this.Controls.Add(this.loginPage1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -85,8 +98,9 @@
         #endregion
 
         private System.Windows.Forms.Button Button_start_game;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_login;
         private System.Windows.Forms.GroupBox groupBox1;
+        private LoginPage loginPage1;
     }
 }
 

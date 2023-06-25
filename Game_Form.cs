@@ -23,7 +23,7 @@ namespace project_emtehani
         }
 
         public List<PictureBox> picturelist;
-
+        public Player playeringameplaying;
         public Game_Form()
         {
             InitializeComponent();
@@ -286,6 +286,16 @@ namespace project_emtehani
             Random_Candy(picturelist);
             Check_three_Candy(picturelist);
             Gravity_For_Candy(picturelist);
+            if (LoginPage.instance.playeringame != null)
+            {
+                playeringameplaying = LoginPage.instance.playeringame;
+                scoreofplayer.Text = playeringameplaying.score.ToString();
+            }
+            else
+            {
+                scoreofplayer.Text = "playing casual...";
+            }
+
         }
 
 
@@ -358,5 +368,6 @@ namespace project_emtehani
 
         }
 
+      
     }
 }

@@ -106,6 +106,10 @@ namespace project_emtehani
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.scoreofplayer = new System.Windows.Forms.Label();
+            this.Button_start_game = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
@@ -176,8 +180,9 @@ namespace project_emtehani
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.groupBox1.Controls.Add(this.Button_start_game);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox1.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.groupBox1.Font = new System.Drawing.Font("B Titr", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(221, 609);
@@ -1144,6 +1149,36 @@ namespace project_emtehani
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(392, 369);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 28);
+            this.label1.TabIndex = 75;
+            this.label1.Text = "score :";
+            // 
+            // scoreofplayer
+            // 
+            this.scoreofplayer.AutoSize = true;
+            this.scoreofplayer.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreofplayer.Location = new System.Drawing.Point(461, 379);
+            this.scoreofplayer.Name = "scoreofplayer";
+            this.scoreofplayer.Size = new System.Drawing.Size(21, 16);
+            this.scoreofplayer.TabIndex = 75;
+            this.scoreofplayer.Text = "10";
+            // 
+            // Button_start_game
+            // 
+            this.Button_start_game.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Button_start_game.Location = new System.Drawing.Point(6, 26);
+            this.Button_start_game.Name = "Button_start_game";
+            this.Button_start_game.Size = new System.Drawing.Size(200, 62);
+            this.Button_start_game.TabIndex = 1;
+            this.Button_start_game.Text = "start game";
+            this.Button_start_game.UseVisualStyleBackColor = true;
+            // 
             // Game_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1151,6 +1186,8 @@ namespace project_emtehani
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(804, 609);
+            this.Controls.Add(this.scoreofplayer);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox33);
@@ -1218,11 +1255,13 @@ namespace project_emtehani
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Game_Form";
             this.Text = "candy crush";
             this.Activated += new System.EventHandler(this.Game_Form_Activated);
             this.Load += new System.EventHandler(this.Game_Form_Load);
             this.Shown += new System.EventHandler(this.Game_Form_Shown);
+            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
@@ -1290,6 +1329,7 @@ namespace project_emtehani
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1376,5 +1416,8 @@ namespace project_emtehani
         private System.Windows.Forms.Label Score_of_379;
         private System.Windows.Forms.Button Candy_380;
         private System.Windows.Forms.Label Score_of_380;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label scoreofplayer;
+        private System.Windows.Forms.Button Button_start_game;
     }
 }
