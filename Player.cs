@@ -31,6 +31,16 @@ namespace project_emtehani
         public int countwin { get; set; }
         public int countlose { get; set; }
         public string friends_id { get; set; }
+        public string friendacceptcontest { get; set; }
+        public string friendthathavecontestwith { get; set; }
+        public string requesttohavecontest { get; set; }
+        public string finalcontestfinish { get; set; }
+        public int scoreincontest { get; set; }
+
+
+
+
+
 
     }
     public class Friend_Of_Player : Player

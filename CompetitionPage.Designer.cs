@@ -43,6 +43,8 @@
             this.acceptcontestmain = new System.Windows.Forms.Button();
             this.updatefriendlist = new System.Windows.Forms.Button();
             this.dataGridView100 = new System.Windows.Forms.DataGridView();
+            this.button_rejectcontestmain = new System.Windows.Forms.Button();
+            this.button_seeresault = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView100)).BeginInit();
             this.SuspendLayout();
@@ -135,15 +137,16 @@
             // 
             this.usernameinvitertextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.usernameinvitertextbox.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.usernameinvitertextbox.Location = new System.Drawing.Point(11, 249);
+            this.usernameinvitertextbox.Location = new System.Drawing.Point(281, 237);
             this.usernameinvitertextbox.Name = "usernameinvitertextbox";
             this.usernameinvitertextbox.Size = new System.Drawing.Size(209, 20);
             this.usernameinvitertextbox.TabIndex = 21;
+            this.usernameinvitertextbox.VisibleChanged += new System.EventHandler(this.usernameinvitertextbox_VisibleChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 219);
+            this.label4.Location = new System.Drawing.Point(278, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(178, 13);
             this.label4.TabIndex = 22;
@@ -161,36 +164,60 @@
             // 
             // acceptcontestmain
             // 
-            this.acceptcontestmain.Location = new System.Drawing.Point(11, 275);
+            this.acceptcontestmain.Location = new System.Drawing.Point(281, 275);
             this.acceptcontestmain.Name = "acceptcontestmain";
             this.acceptcontestmain.Size = new System.Drawing.Size(209, 43);
             this.acceptcontestmain.TabIndex = 24;
             this.acceptcontestmain.Text = "accept contest";
             this.acceptcontestmain.UseVisualStyleBackColor = true;
+            this.acceptcontestmain.Click += new System.EventHandler(this.acceptcontestmain_Click);
             // 
             // updatefriendlist
             // 
-            this.updatefriendlist.Location = new System.Drawing.Point(11, 324);
+            this.updatefriendlist.Location = new System.Drawing.Point(281, 421);
             this.updatefriendlist.Name = "updatefriendlist";
             this.updatefriendlist.Size = new System.Drawing.Size(209, 43);
             this.updatefriendlist.TabIndex = 25;
             this.updatefriendlist.Text = "update friend";
             this.updatefriendlist.UseVisualStyleBackColor = true;
+            this.updatefriendlist.Click += new System.EventHandler(this.updatefriendlist_Click);
             // 
             // dataGridView100
             // 
             this.dataGridView100.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView100.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView100.Location = new System.Drawing.Point(281, 77);
+            this.dataGridView100.Location = new System.Drawing.Point(281, 62);
             this.dataGridView100.Name = "dataGridView100";
-            this.dataGridView100.Size = new System.Drawing.Size(240, 399);
+            this.dataGridView100.Size = new System.Drawing.Size(240, 113);
             this.dataGridView100.TabIndex = 26;
+            // 
+            // button_rejectcontestmain
+            // 
+            this.button_rejectcontestmain.Location = new System.Drawing.Point(281, 324);
+            this.button_rejectcontestmain.Name = "button_rejectcontestmain";
+            this.button_rejectcontestmain.Size = new System.Drawing.Size(209, 43);
+            this.button_rejectcontestmain.TabIndex = 27;
+            this.button_rejectcontestmain.Text = "reject contest";
+            this.button_rejectcontestmain.UseVisualStyleBackColor = true;
+            this.button_rejectcontestmain.Click += new System.EventHandler(this.button_rejectcontestmain_Click);
+            // 
+            // button_seeresault
+            // 
+            this.button_seeresault.Location = new System.Drawing.Point(281, 373);
+            this.button_seeresault.Name = "button_seeresault";
+            this.button_seeresault.Size = new System.Drawing.Size(209, 42);
+            this.button_seeresault.TabIndex = 28;
+            this.button_seeresault.Text = "see reasult";
+            this.button_seeresault.UseVisualStyleBackColor = true;
+            this.button_seeresault.Click += new System.EventHandler(this.button_seeresault_Click);
             // 
             // CompetitionPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.button_seeresault);
+            this.Controls.Add(this.button_rejectcontestmain);
             this.Controls.Add(this.dataGridView100);
             this.Controls.Add(this.updatefriendlist);
             this.Controls.Add(this.acceptcontestmain);
@@ -209,6 +236,7 @@
             this.Name = "CompetitionPage";
             this.Size = new System.Drawing.Size(556, 510);
             this.Load += new System.EventHandler(this.CompetitionPage_Load);
+            this.VisibleChanged += new System.EventHandler(this.CompetitionPage_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView100)).EndInit();
             this.ResumeLayout(false);
@@ -233,5 +261,7 @@
         private System.Windows.Forms.Button acceptcontestmain;
         private System.Windows.Forms.Button updatefriendlist;
         private System.Windows.Forms.DataGridView dataGridView100;
+        private System.Windows.Forms.Button button_rejectcontestmain;
+        private System.Windows.Forms.Button button_seeresault;
     }
 }

@@ -31,6 +31,7 @@ namespace project_emtehani
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.accountinfo = new System.Windows.Forms.Button();
             this.Refill_again = new System.Windows.Forms.Button();
             this.Score_of_376 = new System.Windows.Forms.Label();
             this.Score_of_377 = new System.Windows.Forms.Label();
@@ -109,7 +110,9 @@ namespace project_emtehani
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.scoreofplayer = new System.Windows.Forms.Label();
-            this.accountinfo = new System.Windows.Forms.Button();
+            this.saveandexit = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.topscoreofplayer = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
@@ -181,6 +184,7 @@ namespace project_emtehani
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.groupBox1.Controls.Add(this.saveandexit);
             this.groupBox1.Controls.Add(this.accountinfo);
             this.groupBox1.Controls.Add(this.Refill_again);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -191,6 +195,20 @@ namespace project_emtehani
             this.groupBox1.TabIndex = 65;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "menue :";
+            // 
+            // accountinfo
+            // 
+            this.accountinfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.accountinfo.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.accountinfo.FlatAppearance.BorderSize = 5;
+            this.accountinfo.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.accountinfo.Location = new System.Drawing.Point(6, 126);
+            this.accountinfo.Name = "accountinfo";
+            this.accountinfo.Size = new System.Drawing.Size(200, 62);
+            this.accountinfo.TabIndex = 2;
+            this.accountinfo.Text = "account information";
+            this.accountinfo.UseVisualStyleBackColor = false;
+            this.accountinfo.Click += new System.EventHandler(this.accountinfo_Click);
             // 
             // Refill_again
             // 
@@ -1171,9 +1189,9 @@ namespace project_emtehani
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(392, 369);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 28);
+            this.label1.Size = new System.Drawing.Size(65, 28);
             this.label1.TabIndex = 75;
-            this.label1.Text = "score :";
+            this.label1.Text = "Score :";
             // 
             // scoreofplayer
             // 
@@ -1185,19 +1203,39 @@ namespace project_emtehani
             this.scoreofplayer.TabIndex = 75;
             this.scoreofplayer.Text = "10";
             // 
-            // accountinfo
+            // saveandexit
             // 
-            this.accountinfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.accountinfo.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.accountinfo.FlatAppearance.BorderSize = 5;
-            this.accountinfo.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.accountinfo.Location = new System.Drawing.Point(6, 126);
-            this.accountinfo.Name = "accountinfo";
-            this.accountinfo.Size = new System.Drawing.Size(200, 62);
-            this.accountinfo.TabIndex = 2;
-            this.accountinfo.Text = "account information";
-            this.accountinfo.UseVisualStyleBackColor = false;
-            this.accountinfo.Click += new System.EventHandler(this.accountinfo_Click);
+            this.saveandexit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.saveandexit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.saveandexit.FlatAppearance.BorderSize = 5;
+            this.saveandexit.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.saveandexit.Location = new System.Drawing.Point(6, 223);
+            this.saveandexit.Name = "saveandexit";
+            this.saveandexit.Size = new System.Drawing.Size(200, 62);
+            this.saveandexit.TabIndex = 3;
+            this.saveandexit.Text = "Save game and exit";
+            this.saveandexit.UseVisualStyleBackColor = false;
+            this.saveandexit.Click += new System.EventHandler(this.saveandexit_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(392, 413);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 28);
+            this.label2.TabIndex = 76;
+            this.label2.Text = "Top score :";
+            // 
+            // topscoreofplayer
+            // 
+            this.topscoreofplayer.AutoSize = true;
+            this.topscoreofplayer.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.topscoreofplayer.Location = new System.Drawing.Point(494, 423);
+            this.topscoreofplayer.Name = "topscoreofplayer";
+            this.topscoreofplayer.Size = new System.Drawing.Size(21, 16);
+            this.topscoreofplayer.TabIndex = 77;
+            this.topscoreofplayer.Text = "10";
             // 
             // Game_Form
             // 
@@ -1206,6 +1244,8 @@ namespace project_emtehani
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(804, 609);
+            this.Controls.Add(this.topscoreofplayer);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.scoreofplayer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
@@ -1440,5 +1480,8 @@ namespace project_emtehani
         private System.Windows.Forms.Label scoreofplayer;
         private System.Windows.Forms.Button Refill_again;
         private System.Windows.Forms.Button accountinfo;
+        private System.Windows.Forms.Button saveandexit;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label topscoreofplayer;
     }
 }

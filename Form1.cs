@@ -32,8 +32,10 @@ namespace project_emtehani
 
         private void button_login_Click(object sender, EventArgs e)
         {
+            competitionPage1.Hide();
             friend1.Hide();
             loginPage1.Show();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -50,6 +52,7 @@ namespace project_emtehani
 
         private void button_addfriend_Click(object sender, EventArgs e)
         {
+            competitionPage1.Hide();
             loginPage1.Hide();
             if (LoginPage.idplayeringame != -1)
             {
@@ -78,6 +81,12 @@ namespace project_emtehani
 
             }
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Have a good day ");
+            Form1.instance.Close();
         }
     }
 }

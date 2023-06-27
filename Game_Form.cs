@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -108,6 +109,7 @@ namespace project_emtehani
                             if ((pictures[num_right + 1 - 1].BackgroundImage == picture.BackgroundImage) && ((num_right + 1) % 8 != 1))
                             {
                                 Score(picture);
+                                topscore();
                                 picture.BackgroundImage = null;
                                 pictures[num_right - 1].BackgroundImage = null;
                                 pictures[num_right + 1 - 1].BackgroundImage = null;
@@ -122,6 +124,7 @@ namespace project_emtehani
                             if ((pictures[num_left - 1 - 1].BackgroundImage == picture.BackgroundImage) && ((num_left + 1) % 8 != 0))
                             {
                                 Score(picture);
+                                topscore();
                                 picture.BackgroundImage = null;
                                 pictures[num_left - 1].BackgroundImage = null;
                                 pictures[num_left + 1 - 1].BackgroundImage = null;
@@ -136,6 +139,7 @@ namespace project_emtehani
                             if ((pictures[num_up - 8 - 1].BackgroundImage == picture.BackgroundImage) && ((num_up - 8) >= 1))
                             {
                                 Score(picture);
+                                topscore();
                                 picture.BackgroundImage = null;
                                 pictures[num_up - 1].BackgroundImage = null;
                                 pictures[num_up - 8 - 1].BackgroundImage = null;
@@ -151,6 +155,7 @@ namespace project_emtehani
                             if ((pictures[num_down + 8 - 1].BackgroundImage == picture.BackgroundImage) && ((num_down + 8) <= 0))
                             {
                                 Score(picture);
+                                topscore();
                                 picture.BackgroundImage = null;
                                 pictures[num_down - 1].BackgroundImage = null;
                                 pictures[num_down + 8 - 1].BackgroundImage = null;
@@ -285,15 +290,25 @@ namespace project_emtehani
 
 
         }
+        public void topscore()
+        {
+            if (int.Parse(scoreofplayer.Text) > int.Parse(topscoreofplayer.Text))
+            {
+
+                playeringameplaying.topscore = playeringameplaying.score;
+                scoreofplayer.Text = playeringameplaying.score.ToString();
+                topscoreofplayer.Text = scoreofplayer.Text;
+            }
+        }
         public void Score(PictureBox picture)
         {
             if (picture.BackgroundImage == Candy_376.BackgroundImage)
             {
-                playeringameplaying.score = playeringameplaying.score +10;
+                playeringameplaying.score = playeringameplaying.score + 10;
             }
             else if (picture.BackgroundImage == Candy_377.BackgroundImage)
             {
-                playeringameplaying.score = playeringameplaying.score+20;
+                playeringameplaying.score = playeringameplaying.score + 20;
             }
             else if (picture.BackgroundImage == Candy_378.BackgroundImage)
             {
@@ -311,21 +326,24 @@ namespace project_emtehani
         }
         public void Game_Form_Load(object sender, EventArgs e)
         {
-           
+
 
             if (LoginPage.idplayeringame != -1)
             {
                 List<Player> players = new List<Player>();
                 players = DataSql.playersinsql();
-                playeringameplaying = players.FirstOrDefault(p => p.Id == LoginPage.idplayeringame);              
+                playeringameplaying = players.FirstOrDefault(p => p.Id == LoginPage.idplayeringame);
                 picturelist = this.Controls.OfType<PictureBox>().ToList();
                 picturelist = picturelist.OrderBy(p => int.Parse(p.Name.Substring(10))).ToList();
+                int trmptopscorebeforegame = playeringameplaying.topscore;
                 Random_Candy(picturelist);
                 Check_three_Candy(picturelist);
                 Gravity_For_Candy(picturelist);
                 Refill_After_Gravity(picturelist);
                 playeringameplaying.score = 0;
                 scoreofplayer.Text = playeringameplaying.score.ToString();
+                playeringameplaying.topscore= trmptopscorebeforegame;
+                topscoreofplayer.Text = playeringameplaying.topscore.ToString();
             }
             else
             {
@@ -378,6 +396,7 @@ namespace project_emtehani
                         Two_Picture.P1.BackgroundImage = temppicture;
                         Check_three_Candy(picturelist);
                         Gravity_For_Candy(picturelist);
+                        Thread.Sleep(50);
                         Refill_After_Gravity(picturelist);
 
                         Two_Picture.isP1selected = false;
@@ -409,12 +428,15 @@ namespace project_emtehani
         private void Refill_again_Click(object sender, EventArgs e)
         {
             int tempscore = playeringameplaying.score;
+            int temptopscore = playeringameplaying.topscore;
             Random_Candy(picturelist);
             Check_three_Candy(picturelist);
             Gravity_For_Candy(picturelist);
             Refill_After_Gravity(picturelist);
-            playeringameplaying.score = tempscore;
+            playeringameplaying.score = 0;
+            playeringameplaying.topscore= temptopscore;
             scoreofplayer.Text = playeringameplaying.score.ToString();
+            topscoreofplayer.Text = playeringameplaying.topscore.ToString();
         }
 
         private void accountinfo_Click(object sender, EventArgs e)
@@ -423,6 +445,12 @@ namespace project_emtehani
                 $"family = {playeringameplaying.familyname}\n" +
                 $"username = {playeringameplaying.username}\n" +
                 $"password = {playeringameplaying.password} \n");
+        }
+
+        private void saveandexit_Click(object sender, EventArgs e)
+        {
+            DataSql.Save_Exit_Game(int.Parse(scoreofplayer.Text), int.Parse(topscoreofplayer.Text));
+            Game_Form.instance.Close();
         }
     }
 }
