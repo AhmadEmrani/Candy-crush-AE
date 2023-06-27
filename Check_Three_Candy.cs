@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace project_emtehani
 {
-    internal class Check_Three_Candy
+    public static class Check_Three_Candy
     {
 
     }

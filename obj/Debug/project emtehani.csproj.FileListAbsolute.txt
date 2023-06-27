@@ -16,3 +16,5 @@ F:\CODES C#\project emtehani\bin\Debug\EntityFramework.xml
 F:\CODES C#\project emtehani\bin\Debug\EntityFramework.SqlServer.xml
 F:\CODES C#\project emtehani\obj\Debug\project emtehani.csproj.CopyComplete
 F:\CODES C#\project emtehani\obj\Debug\project_emtehani.LoginPage.resources
+F:\CODES C#\project emtehani\obj\Debug\project_emtehani.Friendpage.resources
+F:\CODES C#\project emtehani\obj\Debug\project_emtehani.CompetitionPage.resources

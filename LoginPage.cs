@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,8 +15,9 @@ namespace project_emtehani
 {
     public partial class LoginPage : UserControl
     {
-        public static LoginPage instance ;
-        public  DataBase db = new DataBase();
+        public static int idplayeringame=-1;
+        public static LoginPage instance;
+        public DataBase db = new DataBase();
         public DataBase database;
         public Player playeringame;
         public LoginPage()
@@ -25,40 +28,20 @@ namespace project_emtehani
         }
         private void createaccount_Click(object sender, EventArgs e)
         {
-            string name = Nametextbox.Text;
-            string familyname = FamilynametextBox.Text;
-            string username = Usernamecreate.Text;
-            string password = Passwordcreate.Text;
-            List<Player> playersforlogincheck = db.Players.ToList();
-            var repatative = playersforlogincheck.First(q => q.username == username);
-            if (repatative == null)
-            {
-                Player p = new Player(name, familyname, username, password);
-                db.Players.Add(p);
-                db.SaveChanges();
-            }
-            else
-            {
-                MessageBox.Show($"this username : ({username}) used before you plz try another one");
-            }
-
+            //List<Player> list = DataSql.playersinsql();
+            DataSql.Add_Player(int.Parse(IDtextBox.Text),Nametextbox.Text, FamilynametextBox.Text, Usernamecreate.Text, Passwordcreate.Text);
+            LoginPage.instance.Hide();
+            usernamelogin.Text = null; passwordlogin.Text = null;
+            Usernamecreate.Text = null; Passwordcreate.Text = null;
+            IDtextBox.Text = null; Nametextbox.Text = null; FamilynametextBox.Text = null;
         }
         private void loginto_Click(object sender, EventArgs e)
         {
-            string usernamelogin1 = usernamelogin.Text;
-            string passwordlogin1 = passwordlogin.Text;
-            List<Player> playersforlogin = db.Players.ToList();
-            var playerfind = playersforlogin.FirstOrDefault(p => p.username==usernamelogin1);
-            if (playerfind.password == passwordlogin1)
-            {
-                playeringame = playerfind;
-                playeringame.score= 0;
-                MessageBox.Show($"hello {playerfind.name}  {playerfind.familyname} now you can play...");
-            }
-            else
-            {
-                MessageBox.Show($"there is no player with this username or password try again !");
-            }
+            idplayeringame = DataSql.Login_to_Account(usernamelogin.Text, passwordlogin.Text);
+            usernamelogin.Text = null; passwordlogin.Text = null;
+            Usernamecreate.Text = null; Passwordcreate.Text = null;
+            IDtextBox.Text = null; Nametextbox.Text = null; FamilynametextBox.Text = null;
+            LoginPage.instance.Hide();
         }
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
@@ -80,6 +63,11 @@ namespace project_emtehani
 
         }
 
-       
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+            SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\ahmad;Initial Catalog=candycrushahmad2;Integrated Security=True");
+            connection.Open();
+            connection.Close();
+        }
     }
 }

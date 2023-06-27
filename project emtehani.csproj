@@ -57,12 +57,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Check_Three_Candy.cs" />
+    <Compile Include="Competition.cs" />
+    <Compile Include="CompetitionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompetitionPage.Designer.cs">
+      <DependentUpon>CompetitionPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataBase.cs" />
+    <Compile Include="DataSql.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Friendpage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Friendpage.Designer.cs">
+      <DependentUpon>Friendpage.cs</DependentUpon>
     </Compile>
     <Compile Include="Game_Form.cs">
       <SubType>Form</SubType>
@@ -77,10 +91,21 @@
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Player.cs" />
+    <Compile Include="playersdatacandycrush.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>playersdatacandycrush.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CompetitionPage.resx">
+      <DependentUpon>CompetitionPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Friendpage.resx">
+      <DependentUpon>Friendpage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Game_Form.resx">
       <DependentUpon>Game_Form.cs</DependentUpon>
@@ -99,6 +124,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="playersdatacandycrush.xsc">
+      <DependentUpon>playersdatacandycrush.xsd</DependentUpon>
+    </None>
+    <None Include="playersdatacandycrush.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>playersdatacandycrush.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="playersdatacandycrush.xss">
+      <DependentUpon>playersdatacandycrush.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace project_emtehani
 {
     public partial class Game_Form : Form
     {
+        public static Game_Form instance;
         public static class Two_Picture
         {
             public static PictureBox P1 = new PictureBox();
@@ -28,6 +30,7 @@ namespace project_emtehani
         {
             InitializeComponent();
             picturelist = new List<PictureBox>();
+            instance = this;
         }
         public void Random_Candy(List<PictureBox> pictures)
         {
@@ -104,7 +107,7 @@ namespace project_emtehani
                         {
                             if ((pictures[num_right + 1 - 1].BackgroundImage == picture.BackgroundImage) && ((num_right + 1) % 8 != 1))
                             {
-
+                                Score(picture);
                                 picture.BackgroundImage = null;
                                 pictures[num_right - 1].BackgroundImage = null;
                                 pictures[num_right + 1 - 1].BackgroundImage = null;
@@ -118,7 +121,7 @@ namespace project_emtehani
                         {
                             if ((pictures[num_left - 1 - 1].BackgroundImage == picture.BackgroundImage) && ((num_left + 1) % 8 != 0))
                             {
-
+                                Score(picture);
                                 picture.BackgroundImage = null;
                                 pictures[num_left - 1].BackgroundImage = null;
                                 pictures[num_left + 1 - 1].BackgroundImage = null;
@@ -132,10 +135,11 @@ namespace project_emtehani
                         {
                             if ((pictures[num_up - 8 - 1].BackgroundImage == picture.BackgroundImage) && ((num_up - 8) >= 1))
                             {
-
+                                Score(picture);
                                 picture.BackgroundImage = null;
                                 pictures[num_up - 1].BackgroundImage = null;
                                 pictures[num_up - 8 - 1].BackgroundImage = null;
+
 
                             }
                         }
@@ -146,17 +150,19 @@ namespace project_emtehani
                         {
                             if ((pictures[num_down + 8 - 1].BackgroundImage == picture.BackgroundImage) && ((num_down + 8) <= 0))
                             {
-
+                                Score(picture);
                                 picture.BackgroundImage = null;
                                 pictures[num_down - 1].BackgroundImage = null;
                                 pictures[num_down + 8 - 1].BackgroundImage = null;
+
 
                             }
                         }
                     }
                 }
             }
- 
+            scoreofplayer.Text = playeringameplaying.score.ToString();
+
         }
         public void Gravity_For_Candy(List<PictureBox> pictures)
         {
@@ -186,7 +192,7 @@ namespace project_emtehani
                 {
                     int num_up_2 = int.Parse(picture2.Name.Substring(10)) - 8;
                     bool num_up_2_exist = true;
-                  
+
                     if (num_up_2 < 1)
                     {
                         num_up_2_exist = false;
@@ -264,12 +270,12 @@ namespace project_emtehani
                 {
                     if (picture2.BackgroundImage == null)
                     {
-                        null_picture= true;
-                        refill_again= true; 
+                        null_picture = true;
+                        refill_again = true;
                         break;
                     }
                 }
-                if(!null_picture)
+                if (!null_picture)
                 {
                     refill_again = false;
                 }
@@ -277,29 +283,61 @@ namespace project_emtehani
             ///////////////
             ///
 
-          
+
+        }
+        public void Score(PictureBox picture)
+        {
+            if (picture.BackgroundImage == Candy_376.BackgroundImage)
+            {
+                playeringameplaying.score = playeringameplaying.score +10;
+            }
+            else if (picture.BackgroundImage == Candy_377.BackgroundImage)
+            {
+                playeringameplaying.score = playeringameplaying.score+20;
+            }
+            else if (picture.BackgroundImage == Candy_378.BackgroundImage)
+            {
+                playeringameplaying.score = playeringameplaying.score + 40;
+            }
+            else if (picture.BackgroundImage == Candy_379.BackgroundImage)
+            {
+                playeringameplaying.score = playeringameplaying.score + 80;
+            }
+            else if (picture.BackgroundImage == Candy_380.BackgroundImage)
+            {
+                playeringameplaying.score = playeringameplaying.score + 100;
+            }
+            scoreofplayer.Text = playeringameplaying.score.ToString();
         }
         public void Game_Form_Load(object sender, EventArgs e)
         {
-            picturelist = this.Controls.OfType<PictureBox>().ToList();
-            picturelist = picturelist.OrderBy(p => int.Parse(p.Name.Substring(10))).ToList();
-            Random_Candy(picturelist);
-            Check_three_Candy(picturelist);
-            Gravity_For_Candy(picturelist);
-            if (LoginPage.instance.playeringame != null)
+           
+
+            if (LoginPage.idplayeringame != -1)
             {
-                playeringameplaying = LoginPage.instance.playeringame;
+                List<Player> players = new List<Player>();
+                players = DataSql.playersinsql();
+                playeringameplaying = players.FirstOrDefault(p => p.Id == LoginPage.idplayeringame);              
+                picturelist = this.Controls.OfType<PictureBox>().ToList();
+                picturelist = picturelist.OrderBy(p => int.Parse(p.Name.Substring(10))).ToList();
+                Random_Candy(picturelist);
+                Check_three_Candy(picturelist);
+                Gravity_For_Candy(picturelist);
+                Refill_After_Gravity(picturelist);
+                playeringameplaying.score = 0;
                 scoreofplayer.Text = playeringameplaying.score.ToString();
             }
             else
             {
-                scoreofplayer.Text = "playing casual...";
+                MessageBox.Show("plz first login to your account");
+                Game_Form.instance.Close();
+
             }
 
         }
 
 
-        private  void pictureBox_Click(object sender, EventArgs e)
+        private void pictureBox_Click(object sender, EventArgs e)
         {
             if (!Two_Picture.isP1selected)
             {
@@ -341,7 +379,7 @@ namespace project_emtehani
                         Check_three_Candy(picturelist);
                         Gravity_For_Candy(picturelist);
                         Refill_After_Gravity(picturelist);
-                       
+
                         Two_Picture.isP1selected = false;
                         Two_Picture.isP2selected = false;
                     }
@@ -368,6 +406,23 @@ namespace project_emtehani
 
         }
 
-      
+        private void Refill_again_Click(object sender, EventArgs e)
+        {
+            int tempscore = playeringameplaying.score;
+            Random_Candy(picturelist);
+            Check_three_Candy(picturelist);
+            Gravity_For_Candy(picturelist);
+            Refill_After_Gravity(picturelist);
+            playeringameplaying.score = tempscore;
+            scoreofplayer.Text = playeringameplaying.score.ToString();
+        }
+
+        private void accountinfo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"name : {playeringameplaying.name}\n " +
+                $"family = {playeringameplaying.familyname}\n" +
+                $"username = {playeringameplaying.username}\n" +
+                $"password = {playeringameplaying.password} \n");
+        }
     }
 }

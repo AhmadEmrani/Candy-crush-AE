@@ -11,15 +11,15 @@ namespace project_emtehani
 {
     public class DataBase : DbContext
     {
-        public static string constring = @"Data Source=(localdb)\local;
-Initial Catalog=CandyCrushMain;
-Integrated Security=True;
-Connect Timeout=30;
-Encrypt=False;
-Trust Server Certificated=False;
-Application Intent=ReadWrite;
-Multi Subnet Failover=false";
-        public DbSet<Player> Players { get; set; }
+//        public static string constring = @"Data Source=(localdb)\ahmad;
+//Initial Catalog=candycrushahmad;
+//Integrated Security=True;
+//Connect Timeout=30;
+//Encrypt=False;
+//Trust Server Certificated=False;
+//Application Intent=ReadWrite;
+//Multi Subnet Failover=false";
+//        public DbSet<Player> Players { get; set; }
 
     }
 

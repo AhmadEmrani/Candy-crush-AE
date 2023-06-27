@@ -10,7 +10,7 @@ namespace project_emtehani
     {
 
         public Player() { } 
-        public Player(string name, string familyname, string username, string passwor) 
+        public Player(string name, string familyname, string username, string password) 
         {
             this.name = name;
             this.familyname = familyname;
@@ -24,6 +24,18 @@ namespace project_emtehani
         public string username { get; set; }
         public string password { get; set; }
         public int score { get; set; }
+        public int topscore { get; set; }
+        public int countgame { get; set; }
+        public List<Player> friends_of_player = new List<Player>();
+        public string incompetition { get; set; }
+        public int countwin { get; set; }
+        public int countlose { get; set; }
+        public string friends_id { get; set; }
 
     }
+    public class Friend_Of_Player : Player
+    { 
+    
+    }
+
 }

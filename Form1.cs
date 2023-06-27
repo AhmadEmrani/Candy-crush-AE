@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
+using System.Data.SqlClient;
 
 namespace project_emtehani
 {
@@ -16,8 +18,10 @@ namespace project_emtehani
         public Form1()
         {
             InitializeComponent();
-            instance= this;
+            instance = this;
             loginPage1.Hide();
+            friend1.Hide();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,14 +32,52 @@ namespace project_emtehani
 
         private void button_login_Click(object sender, EventArgs e)
         {
-           loginPage1.Show();
+            friend1.Hide();
+            loginPage1.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            // Database.SetInitializer(new DropCreateDatabaseIfModelChanges<DataBase>());
+            SqlConnection connection = new SqlConnection(@"Data Source=(localdb)\ahmad;Initial Catalog=candycrushahmad2;Integrated Security=True");
+            connection.Open();
+            connection.Close();
+            friend1.Hide();
+            competitionPage1.Hide();
+            loginPage1.Show();
+
         }
 
-       
+        private void button_addfriend_Click(object sender, EventArgs e)
+        {
+            loginPage1.Hide();
+            if (LoginPage.idplayeringame != -1)
+            {
+                friend1.Show();
+            }
+            else
+            {
+                MessageBox.Show($"you must login first \n " +
+                    $"for login press login button" );
+
+            }
+        }
+
+        private void button_makecontest_Click(object sender, EventArgs e)
+        {
+            loginPage1.Hide();
+            friend1.Hide();
+            if (LoginPage.idplayeringame != -1)
+            {
+                competitionPage1.Show();
+            }
+            else
+            {
+                MessageBox.Show($"you must login first \n " +
+                    $"for login press login button");
+
+            }
+
+        }
     }
 }

@@ -31,7 +31,11 @@
             this.Button_start_game = new System.Windows.Forms.Button();
             this.button_login = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_addfriend = new System.Windows.Forms.Button();
             this.loginPage1 = new project_emtehani.LoginPage();
+            this.friend1 = new project_emtehani.Friendpage();
+            this.competitionPage1 = new project_emtehani.CompetitionPage();
+            this.button_makecontest = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,14 +63,28 @@
             // groupBox1
             // 
             this.groupBox1.AutoSize = true;
-            this.groupBox1.BackColor = System.Drawing.Color.Indigo;
+            this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox1.Controls.Add(this.button_makecontest);
+            this.groupBox1.Controls.Add(this.button_addfriend);
             this.groupBox1.Controls.Add(this.button_login);
             this.groupBox1.Controls.Add(this.Button_start_game);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, -8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(228, 586);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // button_addfriend
+            // 
+            this.button_addfriend.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_addfriend.Location = new System.Drawing.Point(12, 224);
+            this.button_addfriend.Name = "button_addfriend";
+            this.button_addfriend.Size = new System.Drawing.Size(200, 62);
+            this.button_addfriend.TabIndex = 2;
+            this.button_addfriend.Text = "friends";
+            this.button_addfriend.UseVisualStyleBackColor = true;
+            this.button_addfriend.Click += new System.EventHandler(this.button_addfriend_Click);
             // 
             // loginPage1
             // 
@@ -77,12 +95,41 @@
             this.loginPage1.TabIndex = 1;
             this.loginPage1.Visible = false;
             // 
+            // friend1
+            // 
+            this.friend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.friend1.Location = new System.Drawing.Point(234, 12);
+            this.friend1.Name = "friend1";
+            this.friend1.Size = new System.Drawing.Size(556, 544);
+            this.friend1.TabIndex = 2;
+            // 
+            // competitionPage1
+            // 
+            this.competitionPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.competitionPage1.Location = new System.Drawing.Point(234, 12);
+            this.competitionPage1.Name = "competitionPage1";
+            this.competitionPage1.Size = new System.Drawing.Size(556, 544);
+            this.competitionPage1.TabIndex = 3;
+            // 
+            // button_makecontest
+            // 
+            this.button_makecontest.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button_makecontest.Location = new System.Drawing.Point(12, 324);
+            this.button_makecontest.Name = "button_makecontest";
+            this.button_makecontest.Size = new System.Drawing.Size(200, 62);
+            this.button_makecontest.TabIndex = 3;
+            this.button_makecontest.Text = "competition";
+            this.button_makecontest.UseVisualStyleBackColor = true;
+            this.button_makecontest.Click += new System.EventHandler(this.button_makecontest_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 568);
+            this.Controls.Add(this.competitionPage1);
+            this.Controls.Add(this.friend1);
             this.Controls.Add(this.loginPage1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -101,6 +148,10 @@
         private System.Windows.Forms.Button button_login;
         private System.Windows.Forms.GroupBox groupBox1;
         private LoginPage loginPage1;
+        private Friendpage friend1;
+        private System.Windows.Forms.Button button_addfriend;
+        private CompetitionPage competitionPage1;
+        private System.Windows.Forms.Button button_makecontest;
     }
 }
 

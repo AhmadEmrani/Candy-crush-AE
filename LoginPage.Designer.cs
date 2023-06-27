@@ -45,6 +45,8 @@
             this.passwordlogin = new System.Windows.Forms.TextBox();
             this.createaccount = new System.Windows.Forms.Button();
             this.loginto = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.IDtextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             // 
             this.Nametextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Nametextbox.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.Nametextbox.Location = new System.Drawing.Point(93, 110);
+            this.Nametextbox.Location = new System.Drawing.Point(93, 149);
             this.Nametextbox.Name = "Nametextbox";
             this.Nametextbox.Size = new System.Drawing.Size(107, 20);
             this.Nametextbox.TabIndex = 0;
@@ -61,7 +63,7 @@
             // 
             this.FamilynametextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FamilynametextBox.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.FamilynametextBox.Location = new System.Drawing.Point(93, 161);
+            this.FamilynametextBox.Location = new System.Drawing.Point(93, 199);
             this.FamilynametextBox.Name = "FamilynametextBox";
             this.FamilynametextBox.Size = new System.Drawing.Size(107, 20);
             this.FamilynametextBox.TabIndex = 1;
@@ -70,7 +72,7 @@
             // 
             this.Usernamecreate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Usernamecreate.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.Usernamecreate.Location = new System.Drawing.Point(93, 212);
+            this.Usernamecreate.Location = new System.Drawing.Point(93, 254);
             this.Usernamecreate.Name = "Usernamecreate";
             this.Usernamecreate.Size = new System.Drawing.Size(107, 20);
             this.Usernamecreate.TabIndex = 2;
@@ -80,7 +82,7 @@
             // 
             this.Passwordcreate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Passwordcreate.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.Passwordcreate.Location = new System.Drawing.Point(93, 264);
+            this.Passwordcreate.Location = new System.Drawing.Point(93, 306);
             this.Passwordcreate.Name = "Passwordcreate";
             this.Passwordcreate.Size = new System.Drawing.Size(107, 20);
             this.Passwordcreate.TabIndex = 3;
@@ -88,7 +90,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 110);
+            this.label1.Location = new System.Drawing.Point(35, 151);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 4;
@@ -97,7 +99,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 161);
+            this.label2.Location = new System.Drawing.Point(8, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 5;
@@ -106,7 +108,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 212);
+            this.label3.Location = new System.Drawing.Point(15, 254);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 6;
@@ -115,7 +117,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 264);
+            this.label4.Location = new System.Drawing.Point(18, 306);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 7;
@@ -190,7 +192,7 @@
             // createaccount
             // 
             this.createaccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.createaccount.Location = new System.Drawing.Point(93, 301);
+            this.createaccount.Location = new System.Drawing.Point(93, 349);
             this.createaccount.Name = "createaccount";
             this.createaccount.Size = new System.Drawing.Size(107, 47);
             this.createaccount.TabIndex = 15;
@@ -209,10 +211,30 @@
             this.loginto.UseVisualStyleBackColor = true;
             this.loginto.Click += new System.EventHandler(this.loginto_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(52, 108);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(18, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "ID";
+            // 
+            // IDtextBox
+            // 
+            this.IDtextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.IDtextBox.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.IDtextBox.Location = new System.Drawing.Point(93, 101);
+            this.IDtextBox.Name = "IDtextBox";
+            this.IDtextBox.Size = new System.Drawing.Size(107, 20);
+            this.IDtextBox.TabIndex = 18;
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.IDtextBox);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.loginto);
             this.Controls.Add(this.createaccount);
             this.Controls.Add(this.passwordlogin);
@@ -232,6 +254,7 @@
             this.Controls.Add(this.Nametextbox);
             this.Name = "LoginPage";
             this.Size = new System.Drawing.Size(556, 409);
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -257,5 +280,7 @@
         private System.Windows.Forms.TextBox passwordlogin;
         private System.Windows.Forms.Button createaccount;
         private System.Windows.Forms.Button loginto;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox IDtextBox;
     }
 }
