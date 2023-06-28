@@ -204,7 +204,7 @@ namespace project_emtehani
             players = DataSql.playersinsql();
             var playeringameplaying = players.FirstOrDefault(p => p.Id == LoginPage.idplayeringame);
             string[] friendslist = playeringameplaying.friends_id.Split(' ');
-            if (playeringameplaying.incompetition == "True")
+            if (playeringameplaying.incompetition != "True")
             {
                 foreach (string friendIDinlist in friendslist)
                 {
@@ -224,7 +224,7 @@ namespace project_emtehani
                                 cmd.Parameters.Add("@id", SqlDbType.Int).Value = friendtoplaywith.Id;
                                 cmd.Parameters.Add("@boolrequesttohavecontest", SqlDbType.NVarChar).Value = "True";
                                 cmd.Parameters.Add("@friendthathavecontestwith", SqlDbType.NVarChar).Value = playeringameplaying.username;
-                                cmd.Parameters.Add("@topscoreint", SqlDbType.Int).Value = 0;
+                                cmd.Parameters.Add("@scoreincontest", SqlDbType.Int).Value = 0;
                                 cmd.ExecuteNonQuery();
                                 MessageBox.Show("Done succesfully");
                             }
@@ -348,7 +348,7 @@ namespace project_emtehani
             var playeringameplaying = players.FirstOrDefault(p => p.Id == LoginPage.idplayeringame);
             var friendthatplayingwith = players.FirstOrDefault(p => p.username == playeringameplaying.friendthathavecontestwith);
             MessageBox.Show($"your score : {playeringameplaying.scoreincontest} \n friend score : {friendthatplayingwith.scoreincontest}");
-            if((playeringameplaying.finalcontestfinish=="True") && (friendthatplayingwith.finalcontestfinish == "True"))
+            if((playeringameplaying.finalcontestfinish=="True") || (friendthatplayingwith.finalcontestfinish == "True"))////////////////////////////////////////////////
             {
                 if(playeringameplaying.scoreincontest > friendthatplayingwith.scoreincontest)
                 {
@@ -362,7 +362,6 @@ namespace project_emtehani
                 else
                 {
                     playeringameplaying.countlose++;
-                    MessageBox.Show("you WIN the contest");
                     SqlCommand cmd4 = new SqlCommand("update CandyUser2 set countlose=@countlose  where Id=@id", connection);
                     cmd4.Parameters.Add("@id", SqlDbType.Int).Value = playeringameplaying.Id;
                     cmd4.Parameters.Add("@countlose", SqlDbType.Int).Value = playeringameplaying.countlose;

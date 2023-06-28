@@ -124,6 +124,9 @@
   <data name="images_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="candy-2311 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\candy-2311 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="chocolate-bar-and-heart-17922" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chocolate-bar-and-heart-17922.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,16 +142,22 @@
   <data name="candy-2311" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\candy-2311.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="candy-377" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\candy-377.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IMG_20221119_220653_967" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_20221119_220653_967.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="candy-377" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\candy-377.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="candy-378" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\candy-378.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="candy-2311 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\candy-2311 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="candy-2311 (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\candy-2311 (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="candy-23111" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\candy-23111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="candy_381" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\candy_381.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

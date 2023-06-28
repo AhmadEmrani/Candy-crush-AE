@@ -191,24 +191,26 @@
             // 
             // createaccount
             // 
+            this.createaccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.createaccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createaccount.Location = new System.Drawing.Point(93, 349);
             this.createaccount.Name = "createaccount";
             this.createaccount.Size = new System.Drawing.Size(107, 47);
             this.createaccount.TabIndex = 15;
             this.createaccount.Text = "Create Account";
-            this.createaccount.UseVisualStyleBackColor = true;
+            this.createaccount.UseVisualStyleBackColor = false;
             this.createaccount.Click += new System.EventHandler(this.createaccount_Click);
             // 
             // loginto
             // 
+            this.loginto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.loginto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginto.Location = new System.Drawing.Point(370, 197);
             this.loginto.Name = "loginto";
             this.loginto.Size = new System.Drawing.Size(107, 47);
             this.loginto.TabIndex = 16;
             this.loginto.Text = "login to account";
-            this.loginto.UseVisualStyleBackColor = true;
+            this.loginto.UseVisualStyleBackColor = false;
             this.loginto.Click += new System.EventHandler(this.loginto_Click);
             // 
             // label9

@@ -98,22 +98,24 @@
             // 
             // addtofriendbutton
             // 
+            this.addtofriendbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.addtofriendbutton.Location = new System.Drawing.Point(11, 137);
             this.addtofriendbutton.Name = "addtofriendbutton";
             this.addtofriendbutton.Size = new System.Drawing.Size(167, 43);
             this.addtofriendbutton.TabIndex = 15;
             this.addtofriendbutton.Text = "Add to friend";
-            this.addtofriendbutton.UseVisualStyleBackColor = true;
+            this.addtofriendbutton.UseVisualStyleBackColor = false;
             this.addtofriendbutton.Click += new System.EventHandler(this.addtofriendbutton_Click);
             // 
             // showfriends
             // 
+            this.showfriends.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.showfriends.Location = new System.Drawing.Point(11, 200);
             this.showfriends.Name = "showfriends";
             this.showfriends.Size = new System.Drawing.Size(167, 43);
             this.showfriends.TabIndex = 16;
             this.showfriends.Text = "Show friends";
-            this.showfriends.UseVisualStyleBackColor = true;
+            this.showfriends.UseVisualStyleBackColor = false;
             this.showfriends.Click += new System.EventHandler(this.showfriends_Click);
             // 
             // Friendpage

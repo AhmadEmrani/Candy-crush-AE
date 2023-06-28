@@ -83,6 +83,26 @@ namespace project_emtehani.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap candy_2311__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("candy-2311 (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap candy_23111 {
+            get {
+                object obj = ResourceManager.GetObject("candy-23111", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap candy_376 {
             get {
                 object obj = ResourceManager.GetObject("candy-376", resourceCulture);
@@ -116,6 +136,16 @@ namespace project_emtehani.Properties {
         internal static System.Drawing.Bitmap candy_378 {
             get {
                 object obj = ResourceManager.GetObject("candy-378", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap candy_381 {
+            get {
+                object obj = ResourceManager.GetObject("candy_381", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

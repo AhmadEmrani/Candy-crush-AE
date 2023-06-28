@@ -154,32 +154,35 @@
             // 
             // createcontestmain
             // 
+            this.createcontestmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.createcontestmain.Location = new System.Drawing.Point(11, 132);
             this.createcontestmain.Name = "createcontestmain";
             this.createcontestmain.Size = new System.Drawing.Size(209, 43);
             this.createcontestmain.TabIndex = 23;
             this.createcontestmain.Text = "create contest";
-            this.createcontestmain.UseVisualStyleBackColor = true;
+            this.createcontestmain.UseVisualStyleBackColor = false;
             this.createcontestmain.Click += new System.EventHandler(this.createcontestmain_Click);
             // 
             // acceptcontestmain
             // 
+            this.acceptcontestmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.acceptcontestmain.Location = new System.Drawing.Point(281, 275);
             this.acceptcontestmain.Name = "acceptcontestmain";
             this.acceptcontestmain.Size = new System.Drawing.Size(209, 43);
             this.acceptcontestmain.TabIndex = 24;
             this.acceptcontestmain.Text = "accept contest";
-            this.acceptcontestmain.UseVisualStyleBackColor = true;
+            this.acceptcontestmain.UseVisualStyleBackColor = false;
             this.acceptcontestmain.Click += new System.EventHandler(this.acceptcontestmain_Click);
             // 
             // updatefriendlist
             // 
+            this.updatefriendlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.updatefriendlist.Location = new System.Drawing.Point(281, 421);
             this.updatefriendlist.Name = "updatefriendlist";
             this.updatefriendlist.Size = new System.Drawing.Size(209, 43);
             this.updatefriendlist.TabIndex = 25;
             this.updatefriendlist.Text = "update friend";
-            this.updatefriendlist.UseVisualStyleBackColor = true;
+            this.updatefriendlist.UseVisualStyleBackColor = false;
             this.updatefriendlist.Click += new System.EventHandler(this.updatefriendlist_Click);
             // 
             // dataGridView100
@@ -193,22 +196,24 @@
             // 
             // button_rejectcontestmain
             // 
+            this.button_rejectcontestmain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button_rejectcontestmain.Location = new System.Drawing.Point(281, 324);
             this.button_rejectcontestmain.Name = "button_rejectcontestmain";
             this.button_rejectcontestmain.Size = new System.Drawing.Size(209, 43);
             this.button_rejectcontestmain.TabIndex = 27;
             this.button_rejectcontestmain.Text = "reject contest";
-            this.button_rejectcontestmain.UseVisualStyleBackColor = true;
+            this.button_rejectcontestmain.UseVisualStyleBackColor = false;
             this.button_rejectcontestmain.Click += new System.EventHandler(this.button_rejectcontestmain_Click);
             // 
             // button_seeresault
             // 
+            this.button_seeresault.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.button_seeresault.Location = new System.Drawing.Point(281, 373);
             this.button_seeresault.Name = "button_seeresault";
             this.button_seeresault.Size = new System.Drawing.Size(209, 42);
             this.button_seeresault.TabIndex = 28;
             this.button_seeresault.Text = "see reasult";
-            this.button_seeresault.UseVisualStyleBackColor = true;
+            this.button_seeresault.UseVisualStyleBackColor = false;
             this.button_seeresault.Click += new System.EventHandler(this.button_seeresault_Click);
             // 
             // CompetitionPage

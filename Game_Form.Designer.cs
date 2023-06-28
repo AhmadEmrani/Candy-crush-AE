@@ -31,6 +31,7 @@ namespace project_emtehani
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.saveandexit = new System.Windows.Forms.Button();
             this.accountinfo = new System.Windows.Forms.Button();
             this.Refill_again = new System.Windows.Forms.Button();
             this.Score_of_376 = new System.Windows.Forms.Label();
@@ -38,8 +39,12 @@ namespace project_emtehani
             this.Score_of_378 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Score_of_380 = new System.Windows.Forms.Label();
-            this.Candy_380 = new System.Windows.Forms.Button();
             this.Score_of_379 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.scoreofplayer = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.topscoreofplayer = new System.Windows.Forms.Label();
+            this.Candy_380 = new System.Windows.Forms.Button();
             this.Candy_379 = new System.Windows.Forms.Button();
             this.Candy_376 = new System.Windows.Forms.Button();
             this.Candy_377 = new System.Windows.Forms.Button();
@@ -108,11 +113,6 @@ namespace project_emtehani
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.scoreofplayer = new System.Windows.Forms.Label();
-            this.saveandexit = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.topscoreofplayer = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
@@ -195,6 +195,20 @@ namespace project_emtehani
             this.groupBox1.TabIndex = 65;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "menue :";
+            // 
+            // saveandexit
+            // 
+            this.saveandexit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.saveandexit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.saveandexit.FlatAppearance.BorderSize = 5;
+            this.saveandexit.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.saveandexit.Location = new System.Drawing.Point(6, 223);
+            this.saveandexit.Name = "saveandexit";
+            this.saveandexit.Size = new System.Drawing.Size(200, 62);
+            this.saveandexit.TabIndex = 3;
+            this.saveandexit.Text = "Save game and exit";
+            this.saveandexit.UseVisualStyleBackColor = false;
+            this.saveandexit.Click += new System.EventHandler(this.saveandexit_Click);
             // 
             // accountinfo
             // 
@@ -285,6 +299,56 @@ namespace project_emtehani
             this.Score_of_380.TabIndex = 74;
             this.Score_of_380.Text = "100";
             // 
+            // Score_of_379
+            // 
+            this.Score_of_379.AutoSize = true;
+            this.Score_of_379.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Score_of_379.Location = new System.Drawing.Point(56, 203);
+            this.Score_of_379.Name = "Score_of_379";
+            this.Score_of_379.Size = new System.Drawing.Size(21, 16);
+            this.Score_of_379.TabIndex = 72;
+            this.Score_of_379.Text = "80";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(392, 369);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 28);
+            this.label1.TabIndex = 75;
+            this.label1.Text = "Score :";
+            // 
+            // scoreofplayer
+            // 
+            this.scoreofplayer.AutoSize = true;
+            this.scoreofplayer.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreofplayer.Location = new System.Drawing.Point(461, 379);
+            this.scoreofplayer.Name = "scoreofplayer";
+            this.scoreofplayer.Size = new System.Drawing.Size(21, 16);
+            this.scoreofplayer.TabIndex = 75;
+            this.scoreofplayer.Text = "10";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(392, 413);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 28);
+            this.label2.TabIndex = 76;
+            this.label2.Text = "Top score :";
+            // 
+            // topscoreofplayer
+            // 
+            this.topscoreofplayer.AutoSize = true;
+            this.topscoreofplayer.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.topscoreofplayer.Location = new System.Drawing.Point(494, 423);
+            this.topscoreofplayer.Name = "topscoreofplayer";
+            this.topscoreofplayer.Size = new System.Drawing.Size(21, 16);
+            this.topscoreofplayer.TabIndex = 77;
+            this.topscoreofplayer.Text = "10";
+            // 
             // Candy_380
             // 
             this.Candy_380.BackgroundImage = global::project_emtehani.Properties.Resources.candy_2311__1_;
@@ -295,16 +359,6 @@ namespace project_emtehani
             this.Candy_380.Size = new System.Drawing.Size(43, 37);
             this.Candy_380.TabIndex = 73;
             this.Candy_380.UseVisualStyleBackColor = true;
-            // 
-            // Score_of_379
-            // 
-            this.Score_of_379.AutoSize = true;
-            this.Score_of_379.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Score_of_379.Location = new System.Drawing.Point(56, 203);
-            this.Score_of_379.Name = "Score_of_379";
-            this.Score_of_379.Size = new System.Drawing.Size(21, 16);
-            this.Score_of_379.TabIndex = 72;
-            this.Score_of_379.Text = "80";
             // 
             // Candy_379
             // 
@@ -1182,60 +1236,6 @@ namespace project_emtehani
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(392, 369);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 28);
-            this.label1.TabIndex = 75;
-            this.label1.Text = "Score :";
-            // 
-            // scoreofplayer
-            // 
-            this.scoreofplayer.AutoSize = true;
-            this.scoreofplayer.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreofplayer.Location = new System.Drawing.Point(461, 379);
-            this.scoreofplayer.Name = "scoreofplayer";
-            this.scoreofplayer.Size = new System.Drawing.Size(21, 16);
-            this.scoreofplayer.TabIndex = 75;
-            this.scoreofplayer.Text = "10";
-            // 
-            // saveandexit
-            // 
-            this.saveandexit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.saveandexit.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.saveandexit.FlatAppearance.BorderSize = 5;
-            this.saveandexit.Font = new System.Drawing.Font("B Titr", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.saveandexit.Location = new System.Drawing.Point(6, 223);
-            this.saveandexit.Name = "saveandexit";
-            this.saveandexit.Size = new System.Drawing.Size(200, 62);
-            this.saveandexit.TabIndex = 3;
-            this.saveandexit.Text = "Save game and exit";
-            this.saveandexit.UseVisualStyleBackColor = false;
-            this.saveandexit.Click += new System.EventHandler(this.saveandexit_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(392, 413);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 28);
-            this.label2.TabIndex = 76;
-            this.label2.Text = "Top score :";
-            // 
-            // topscoreofplayer
-            // 
-            this.topscoreofplayer.AutoSize = true;
-            this.topscoreofplayer.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topscoreofplayer.Location = new System.Drawing.Point(494, 423);
-            this.topscoreofplayer.Name = "topscoreofplayer";
-            this.topscoreofplayer.Size = new System.Drawing.Size(21, 16);
-            this.topscoreofplayer.TabIndex = 77;
-            this.topscoreofplayer.Text = "10";
             // 
             // Game_Form
             // 

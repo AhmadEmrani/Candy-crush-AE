@@ -342,7 +342,7 @@ namespace project_emtehani
                 Refill_After_Gravity(picturelist);
                 playeringameplaying.score = 0;
                 scoreofplayer.Text = playeringameplaying.score.ToString();
-                playeringameplaying.topscore= trmptopscorebeforegame;
+                playeringameplaying.topscore = trmptopscorebeforegame;
                 topscoreofplayer.Text = playeringameplaying.topscore.ToString();
             }
             else
@@ -391,16 +391,19 @@ namespace project_emtehani
                     if (int.Parse(Two_Picture.P2.Name.Substring(10)) == num_right || int.Parse(Two_Picture.P2.Name.Substring(10)) == num_left
                         || int.Parse(Two_Picture.P2.Name.Substring(10)) == num_up || int.Parse(Two_Picture.P2.Name.Substring(10)) == num_down)
                     {
-                        var temppicture = Two_Picture.P2.BackgroundImage;
-                        Two_Picture.P2.BackgroundImage = Two_Picture.P1.BackgroundImage;
-                        Two_Picture.P1.BackgroundImage = temppicture;
-                        Check_three_Candy(picturelist);
-                        Gravity_For_Candy(picturelist);
-                        Thread.Sleep(50);
-                        Refill_After_Gravity(picturelist);
+                      
+                            var temppicture = Two_Picture.P2.BackgroundImage;
+                            Two_Picture.P2.BackgroundImage = Two_Picture.P1.BackgroundImage;
+                            Two_Picture.P1.BackgroundImage = temppicture;
+                            Check_three_Candy(picturelist);
+                            Gravity_For_Candy(picturelist);
+                            Thread.Sleep(50);
+                            Refill_After_Gravity(picturelist);
 
-                        Two_Picture.isP1selected = false;
-                        Two_Picture.isP2selected = false;
+                            Two_Picture.isP1selected = false;
+                            Two_Picture.isP2selected = false;
+ 
+
                     }
                     else
                     {
@@ -434,7 +437,7 @@ namespace project_emtehani
             Gravity_For_Candy(picturelist);
             Refill_After_Gravity(picturelist);
             playeringameplaying.score = 0;
-            playeringameplaying.topscore= temptopscore;
+            playeringameplaying.topscore = temptopscore;
             scoreofplayer.Text = playeringameplaying.score.ToString();
             topscoreofplayer.Text = playeringameplaying.topscore.ToString();
         }
